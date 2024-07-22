@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3F8F2;
+    color: #373E40;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+header{
+    width: 100%;
+    height: 6.3rem;
+    margin-bottom: 2rem;
+    background-color: #305252;
+    color:#F3F8F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#taskform{
+    width: 100%;
+    padding: 1rem 0;
+    height: 37.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: #305252 solid 2px;
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.input-container{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-container div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.input-container input{
+    width: 100%;
+    padding: 0.5rem;
+    border: #305252 solid 1px;
+    border-radius: 5px;
+}
+
+.input-container button{
+    width: 80%;
+    margin-top: 0.5rem;
+    padding: 1rem 0;
+    font-size: larger;
+    background-color: #305252;
+    color: #F3F8F2;
+    border: #305252 solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.input-container button:hover{
+    color: #305252;
+    background-color: #FAFAFF;
+    border: #305252 solid 1px;
+}
+
+#task-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.todo, .pending, .done{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: red solid 1px;
+}
+
+.todo li, .pending li, .done li{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #305252;
+    color: #F3F8F2;
+}
+
+.taskTitle{
+    height:fit-content;
+    padding: 0.8rem 0;
+    font-size: larger;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: #F3F8F2 solid 1px;
+}
+
+.taskTitle > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskContent{
+    height: fit-content;
+    padding: 0.8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    border-bottom: #F3F8F2 solid 1px;
+}
+
+.taskContent > * {
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.taskCheckboxContainer input[type=checkbox]{
+    transform: scale(1.5);
+}
+
+.taskButton{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.taskButton button{
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.deleteTask, .cancelButton{
+    background-color: #DA3E52;
+    color: #F3F8F2;
+    border: #DA3E52 solid 1px;
+}
+
+.editTask, .validateButton{
+    background-color: #00BD9D;
+    color: #F3F8F2;
+    border: #00BD9D solid 1px;
+
+}
+
+.deleteTask:hover, .cancelButton:hover{
+    color: #DA3E52;
+    background-color: #F3F8F2;
+    border: #DA3E52 solid 1px;
+}
+
+.editTask:hover, .validateButton:hover{
+    color: #00BD9D;
+    background-color: #F3F8F2;
+}
+
+.hidden{
+    display: none;
+}
+
+.modifiedGrid{
+    grid-template-columns: repeat(5, 20%);
+}
+
+.activeButton{
+    color: #00BD9D;
+    background-color: #F3F8F2;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.unusableButton{
+    background-color: lightslategray;
+    border: lightslategray solid 1px;
+    opacity: 0.2;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.unusableCheckBox{
+    cursor: not-allowed;
+    pointer-events: none;
+}

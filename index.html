@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <h1>
+                Todo list
+            </h1>
+        </header>
+        <form action="" id="taskform">
+            <h2>Ajouter une tâche</h2>
+            <div class="input-container">
+                <!-- <div class="title-container">
+                    <label for="title">Titre</label>
+                    <input type="text" name="title" id="title" placeholder="Titre">
+                </div> -->
+                
+                <div class="task-container">
+                    <label for="task">Tâche</label>
+                    <input type="text" name="task" id="task" placeholder="Tâche">
+                </div>
+                <div class="tag-container">
+                    <label for="tag">Tag</label>
+                    <input type="text" name="tag" id="tag" placeholder="Tag">
+                </div>
+                <div class="deadline-container">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" name="deadline" id="deadline" placeholder="deadline">
+                </div>
+                <button type="submit">Ajouter</button>
+            </div>
+        </form>
+        <ul id="task-container">
+            <h2>Liste de tâches:</h2>
+            <div class="taskButton">
+                <button class="validateButton hidden">Valider</button>
+                <button class="cancelButton hidden">Annuler</button>
+                <button class="editTask">Modifier</button>
+                <button class="deleteTask">Supprimer</button>
+            </div>
+            <div class="task-list todo">
+                <!-- Liste des tâches -->
+                <h3>A faire</h3>
+                
+            </div>
+            <div class="task-list pending">
+                <!-- Liste des tâches -->
+                <h3>En cours</h3>
+
+            </div>
+            <div class="task-list done">
+                <!-- Liste des tâches -->
+                <h3>Faites</h3>
+
+            </div>
+        </ul>
+    </main>
+</body>
+</html>
